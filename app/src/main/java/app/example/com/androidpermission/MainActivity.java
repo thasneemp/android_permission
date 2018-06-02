@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void requestStoragePermissions() {
-        // BEGIN_INCLUDE(contacts_permission_request)
         if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                 Manifest.permission.READ_EXTERNAL_STORAGE)
                 || ActivityCompat.shouldShowRequestPermissionRationale(this,
@@ -79,10 +78,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             ActivityCompat.requestPermissions(this, PERMISSIONS_READ_WRITE, REQUEST_PERMISSION_STORAGE);
         } else {
-            // Contact permissions have not been granted yet. Request them directly.
             ActivityCompat.requestPermissions(this, PERMISSIONS_READ_WRITE, REQUEST_PERMISSION_STORAGE);
         }
-        // END_INCLUDE(contacts_permission_request)
     }
 
     /* Checks if external storage is available for read and write */
